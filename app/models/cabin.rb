@@ -1,5 +1,9 @@
 class Cabin
-  DB = PG.connect({:host=>"localhost", :port => 5432, :dbname => 'cabin_fever_backend_development'})
+    if ENV["DATABASE_URL"]
+        PG.connect(ENV['DATABASE_URL'])
+    elsif
+        DB = PG.connect({:host => "localhost", :port => 5432, :dbname => 'cabin_fever_backend_development'})
+    end
 
   def self.all
       results = DB.exec("SELECT * FROM cabins;")
@@ -16,18 +20,18 @@ class Cabin
       end
   end
 
-  # def self.find(id)
-  #   results = DB.exec("SELECT * FROM cabins WHERE id=#{id};")
-  #   return {
-  #        "id" => result["id"].to_i,
-  #        # "lattitude" => result["lattitude"],
-  #        # "longitude" => result["longitude"],
-  #        "address" => result["address"],
-  #        # "image" => result["image"],
-  #        "description" => result["description"],
-  #        # "amenities" => result["amenities"],
-  #   }
-  # end
+  def self.find(id)
+    results = DB.exec("SELECT * FROM cabins WHERE id=#{id};")
+    return {
+         "id" => result["id"].to_i,
+         # "lattitude" => result["lattitude"],
+         # "longitude" => result["longitude"],
+         "address" => result["address"],
+         # "image" => result["image"],
+         "description" => result["description"],
+         # "amenities" => result["amenities"],
+    }
+  end
 
   def self.create(opts)
     results = DB.exec(
