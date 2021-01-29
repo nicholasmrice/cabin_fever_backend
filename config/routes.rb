@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get '/cabins', to: 'cabins#index'
+  get '/cabins/:id', to: 'cabins#show'
+  post '/cabins', to: 'cabins#create'
+  delete '/cabins/:id', to: 'cabins#delete'
+  put '/cabins/:id', to: 'cabins#update'
 end
