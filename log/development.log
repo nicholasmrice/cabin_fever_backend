@@ -11,3 +11,26 @@ Started GET "/cabins" for ::1 at 2021-01-29 07:39:20 -0800
   
 ActionController::RoutingError (No route matches [GET] "/cabins"):
   
+Started GET "/" for ::1 at 2021-01-29 07:49:13 -0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stevenmercer/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stevenmercer/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.5ms | Allocations: 219)
+Completed 200 OK in 10ms (Views: 7.6ms | Allocations: 915)
+
+
+Started GET "/cabins" for ::1 at 2021-01-29 07:49:22 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/cabins"):
+  
+Started GET "/cabin" for ::1 at 2021-01-29 07:49:29 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/cabin"):
+  
+Started GET "/cabin" for ::1 at 2021-01-29 07:49:33 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/cabin"):
+  
+Started GET "/cabins" for ::1 at 2021-01-29 07:49:39 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/cabins"):
+  
