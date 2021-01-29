@@ -1663,3 +1663,50 @@ Processing by CabinsController#index as HTML
 Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 310)
 
 
+Started GET "/cabins" for 127.0.0.1 at 2021-01-29 11:30:44 -0500
+Processing by CabinsController#index as HTML
+Completed 200 OK in 4ms (Views: 0.7ms | Allocations: 309)
+
+
+Started GET "/cabins" for 127.0.0.1 at 2021-01-29 11:30:52 -0500
+Processing by CabinsController#index as HTML
+Completed 200 OK in 5ms (Views: 0.8ms | Allocations: 307)
+
+
+Started GET "/" for ::1 at 2021-01-29 11:30:55 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/nicholasrice/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/nicholasrice/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 76.8ms | Allocations: 335)
+Completed 200 OK in 109ms (Views: 89.7ms | Allocations: 1648)
+
+
+Started GET "/" for ::1 at 2021-01-29 11:31:17 -0500
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/nicholasrice/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/nicholasrice/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 11.1ms | Allocations: 337)
+Completed 200 OK in 35ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 2447)
+
+
+Started GET "/" for ::1 at 2021-01-29 11:31:40 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/nicholasrice/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/nicholasrice/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 24.2ms | Allocations: 219)
+Completed 200 OK in 36ms (Views: 27.8ms | ActiveRecord: 0.0ms | Allocations: 836)
+
+
+Started GET "/cabins" for 127.0.0.1 at 2021-01-29 11:32:59 -0500
+Processing by CabinsController#index as HTML
+Completed 200 OK in 48ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 499)
+
+
+Started GET "/cabins" for 127.0.0.1 at 2021-01-29 11:33:03 -0500
+Processing by CabinsController#index as HTML
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 309)
+
+
+Started GET "/cabins" for 127.0.0.1 at 2021-01-29 11:37:34 -0500
+Processing by CabinsController#index as HTML
+Completed 200 OK in 10ms (Views: 5.2ms | Allocations: 307)
+
+
