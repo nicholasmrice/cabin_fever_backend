@@ -1672,3 +1672,51 @@ Completed 200 OK in 3ms (Views: 0.4ms | Allocations: 346)
 
 
 >>>>>>> 8c5bbe84a770b37280bf29daf13b99b17c85e84d
+  [1m[35m (20.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5353261289763665145)[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCabinsTable (20210129061846)
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "cabins" ("id" bigserial primary key, "address" character varying(50), "description" character varying(300))[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210129061846"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-29 15:59:53.739631"], ["updated_at", "2021-01-29 15:59:53.739631"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(5353261289763665145)[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/cabins" for 127.0.0.1 at 2021-01-29 08:06:05 -0800
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CabinsController#index as HTML
+Completed 200 OK in 26ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1432)
+
+
+Started POST "/cabins" for 127.0.0.1 at 2021-01-29 08:06:11 -0800
+Processing by CabinsController#create as HTML
+  Parameters: {"address"=>"2621 Shadelands Dr", "description"=>"dggeg", "cabins"=>[], "cabin"=>{"address"=>"2621 Shadelands Dr", "description"=>"dggeg", "cabins"=>[]}}
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 336)
+
+
+Started GET "/cabins" for 127.0.0.1 at 2021-01-29 08:06:11 -0800
+Processing by CabinsController#index as HTML
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 310)
+
+
+Started GET "/cabins" for ::1 at 2021-01-29 08:18:46 -0800
+Processing by CabinsController#index as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 307)
+
+
+Started DELETE "/cabins/1" for 127.0.0.1 at 2021-01-29 08:18:51 -0800
+Processing by CabinsController#delete as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 2ms (Views: 0.1ms | Allocations: 277)
+
+
+Started GET "/cabins" for 127.0.0.1 at 2021-01-29 08:18:51 -0800
+Processing by CabinsController#index as HTML
+Completed 200 OK in 2ms (Views: 0.3ms | Allocations: 265)
+
+
