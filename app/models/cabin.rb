@@ -23,12 +23,12 @@ class Cabin
   def self.find(id)
     results = DB.exec("SELECT * FROM cabins WHERE id=#{id};")
     return {
-         "id" => result["id"].to_i,
+         "id" => results.first["id"].to_i,
          # "lattitude" => result["lattitude"],
          # "longitude" => result["longitude"],
-         "address" => result["address"],
+         "address" => results.first["address"],
          # "image" => result["image"],
-         "description" => result["description"],
+         "description" => results.first["description"],
          # "amenities" => result["amenities"],
     }
   end
